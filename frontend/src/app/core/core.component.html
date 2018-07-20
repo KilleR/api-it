@@ -1,3 +1,35 @@
-<div>
-  Core Component
+<div class="route-content">
+  <form [formGroup]="inputControl">
+    <div>
+      <mat-form-field style="width: 500px">
+        <input matInput="" placeholder="What are we scraping from" formControlName="sourceUrl">
+      </mat-form-field>
+      contentId
+      <mat-form-field>
+        <input matInput="" placeholder="anything after the main URL" formControlName="sourceUrlSuffix">
+      </mat-form-field>
+    </div>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Content
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div>
+          <mat-form-field>
+            <input matInput="" placeholder="Starting tag?" formControlName="contentTag">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput="" placeholder="Class?" formControlName="contentClass">
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+
+      <button mat-raised-button="" color="primary" (click)="getContent()">FETCH</button>
+    </mat-card>
+
+  </form>
 </div>
